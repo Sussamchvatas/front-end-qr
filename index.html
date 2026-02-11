@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor</title>
+
+
+  <style>
+
+    * { box-sizing: border-box; }
+    html,body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      background: hsl(212, 45%, 89%); 
+      color: hsl(224, 23%, 23%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+    }
+
+  
+    .card {
+      justify-content: center;
+      width: 270px;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 20px 30px rgba(31, 41, 55, 0.12);
+      overflow: hidden;
+    }
+    .qr-wrap {
+      background: linear-gradient(180deg, hsl(0, 0%, 100%) 0%, hsl(0, 0%, 100%) 100%);
+      padding: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      position: relative;
+    }
+
+   
+    .qr-wrap::before,
+    .qr-wrap::after {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.12;
+      pointer-events: none;
+    }
+    .qr-wrap::before {
+      width: 140px; height: 140px;
+      right: -30px; top: -30px;
+      background: radial-gradient(circle at 30% 30%, white, transparent 40%);
+    }
+    .qr-wrap::after {
+      width: 120px; height: 120px;
+      left: -40px; bottom: -40px;
+      background: radial-gradient(circle at 70% 70%, rgba(255,255,255,0.6), transparent 45%);
+    }
+
+    .qr {
+      width: 220px;
+      height: 220px;
+      border-radius: 8px;
+      background: url('./images/image-qr-code.png') center/cover no-repeat;
+      box-shadow: inset 0 6px 18px rgba(255,255,255,0.12);
+    }
+
+  
+    .card-body {
+      padding: 28px 28px 36px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0 0 12px 0;
+      font-size: 16px;
+      line-height: 1.15;
+      color: hsl(224, 23%, 13%);
+      font-weight: 700;
+    }
+
+    p {
+      margin: 0;
+      color: hsl(220, 15%, 55%);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    
+    .attribution {
+      font-size: 11px; text-align: center; margin-top: 18px; color: hsl(220, 20%, 45%);
+    }
+    .attribution a { color: hsl(228, 45%, 44%); text-decoration: none; }
+
+    @media (max-width: 380px) {
+      .card { width: 300px; }
+      .qr { width: 160px; height: 160px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card" role="group" aria-label="QR code component">
+    <div class="qr-wrap">
+      <div class="qr" aria-hidden="true"></div>
+    </div>
+
+    <div class="card-body">
+      <h1>Improve your front-end skills by building projects</h1>
+      <p>Scan the QR code to visit Frontend Mentor and take your coding skills to the next level</p>
+    </div>
+  </div>
+
+ 
+  </div>
+
+</body>
+</html>
